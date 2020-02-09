@@ -1,0 +1,72 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "~bootstrap/scss/bootstrap.scss";
+
+@mixin all {
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font: normal 1rem sans-serif;
+}
+body {
+  @include all;
+  background-color: #d2fafb;
+  .weatherSec {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    .weather-content {
+      position: relative;
+      width: 60%;
+      height: auto;
+      background: url(../images/winter.png) no-repeat center center;
+      background-size: cover;
+      box-shadow: 0.1rem 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
+      margin: 2rem auto;
+      max-width: 100%;
+      border-radius: 0.2rem;
+      h2 {
+        display: inline-block;
+        padding: 0.5rem 0rem;
+        margin: 2rem auto 0rem auto;
+        font-family: "Russo One", sans-serif;
+      }
+      p {
+        display: inline-block;
+        background-color: #fff;
+        width: 10rem;
+        height: 4rem;
+        border-radius: 0.2rem;
+        margin-top: 2rem;
+        line-height: 4rem;
+        &:first-of-type {
+          margin-right: 1rem;
+        }
+      }
+      span {
+        display: block;
+        margin: 0rem auto;
+        padding: 1rem 0rem;
+        &:last-of-type {
+          display: inline-block;
+          margin: 1rem auto;
+          background-color: #fa163f;
+          width: 90%;
+          height: auto;
+          border-radius: 0.2rem;
+          color: #fff;
+          padding: 1rem 0.2rem;
+        }
+        &.temp {
+          font-size: 2rem;
+          font-family: "Russo One", sans-serif;
+        }
+      }
+    }
+  }
+}
